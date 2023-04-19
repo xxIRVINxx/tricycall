@@ -1,8 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=PT+Serif&family=Playfair+Display&display=swap');
 
 body{
-    background-color: #00800D;
-    font-family: 'Inter', sans-serif;
+    background-color: #0d4446;
+    font-family: 'Nunito', sans-serif;
+}
+
+.btn-primary {
+    background-color: #0d4446 !important;
+}
+
+.text-default {
+    color: whitesmoke !important;
+}
+
+.card-header {
+    background-color: #decece !important;
 }
 nav{
     background-color: #DECECE;
