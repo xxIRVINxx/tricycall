@@ -11,6 +11,7 @@
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
+                    <!-- USERS  -->
                         <div class="row mb-3">
                             <label for="role" class="col-md-4 col-form-label text-md-end">Users</label>
                             <div class="col-md-6">
@@ -26,14 +27,15 @@
                                 @enderror
                             </div>
                         </div>
-                        
+                    
+                    <!-- FIRSTNAME -->
                         <div class="row mb-3">
-                            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
+                            <label for="firstname" class="col-md-4 col-form-label text-md-end">{{ __('First Name') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <input id="firstname" type="text" class="form-control @error('firstname') is-invalid @enderror" name="firstname" value="{{ old('firstname') }}" required autocomplete="firstname" autofocus>
 
-                                @error('name')
+                                @error('firstname')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -41,6 +43,100 @@
                             </div>
                         </div>
 
+                    <!-- LASTNAME -->
+                    <div class="row mb-3">
+                            <label for="lastname" class="col-md-4 col-form-label text-md-end">{{ __('Last Name') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="lastname" type="text" class="form-control @error('lastname') is-invalid @enderror" name="lastname" value="{{ old('lastname') }}" required autocomplete="lastname" autofocus>
+
+                                @error('lastname')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                    <!-- GENDER  -->
+                        <div class="row mb-3">
+                            <label for="role" class="col-md-4 col-form-label text-md-end">Gender</label>
+                                <div class="col-md-6">
+                                    <select id="gender" class="form-control @error('gender') is-invalid @enderror" name="gender">
+                                        <option value="">Select Gender</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                    @error('gender')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                        </div>
+
+                        
+                    <!-- BIRTHDATE -->
+                        <div class="row mb-3">
+                            <label for="birthdate" class="col-md-4 col-form-label text-md-end">{{ __('Birthdate') }}</label>
+                                <div class="col-md-6">
+                                    <input id="birthdate" type="date" class="form-control @error('birthdate') is-invalid @enderror" name="birthdate" value="{{ old('birthdate') }}" required autocomplete="birthdate">
+
+                                    @error('birthdate')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                        </div>
+
+                    
+                    <!-- ADDRESS -->
+                        <div class="row mb-3">
+                            <label for="address" class="col-md-4 col-form-label text-md-end">{{ __('Address') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address">
+
+                                    @error('address')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                        </div>
+
+                     <!-- PLATE NUMBER -->
+                        <div class="row mb-3">
+                            <label for="phone#" class="col-md-4 col-form-label text-md-end">{{ __('Phone Number') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="phone#" type="number" class="form-control @error('phone#') is-invalid @enderror" name="phone#" value="{{ old('phone#') }}" required autocomplete="phone#">
+
+                                        @error('phone#')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                </div>
+                        </div>
+
+                     <!-- PLATE NUMBER -->
+                        <div class="row mb-3">
+                            <label for="plate#" class="col-md-4 col-form-label text-md-end">{{ __('Plate Number') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="plate#" type="text" class="form-control @error('plate#') is-invalid @enderror" name="plate#" value="{{ old('plate#') }}" required autocomplete="plate#">
+
+                                        @error('plate#')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                </div>
+                        </div>
+
+                    <!-- EMAIL ADDRESS -->
                         <div class="row mb-3">
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
 
@@ -54,7 +150,7 @@
                                 @enderror
                             </div>
                         </div>
-
+                    <!-- PASSWORD  -->
                         <div class="row mb-3">
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
 
@@ -69,6 +165,7 @@
                             </div>
                         </div>
 
+                    <!-- CONFIRM PASSWORD  -->
                         <div class="row mb-3">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
 

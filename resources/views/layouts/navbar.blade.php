@@ -24,9 +24,18 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container">
-                <a style="color: #00800D;" class="navbar-brand fw-bold" href="{{ url('/') }}">
-                    TricyCall
+                <a style="color: #00800D;" class="navbar-brand fw-bold" href="{{ url('/home') }}">
+                <img src="../assets/images/logo.png" style="width: 150px">
                 </a>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="{{ request()->is('home') ? 'active' : '' }} nav-item"><a class="nav-link" href="/home">HOME</a></li>
+                            <li class="{{ request()->is('notification') ? 'active' : '' }} nav-item"><a class="nav-link" href="/notification">NOTIFICATION</a></li>
+                            <li class="{{ request()->is('availability') ? 'active' : '' }} nav-item"><a class="nav-link" href="/availability">AVAILABILITY</a></li>
+                            <li class="{{ request()->is('about') ? 'active' : '' }} nav-item"><a class="nav-link" href="/about">ABOUT</a></li>
+                            <li class="{{ request()->is('contact') ? 'active' : '' }} nav-item"><a class="nav-link" href="/contact">CONTACT US</a></li>
+                        </ul>
+                    </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -56,7 +65,7 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                                    {{ Auth::user()->firstname }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">

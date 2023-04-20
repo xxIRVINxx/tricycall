@@ -19,3 +19,9 @@ body{
 nav{
     background-color: #DECECE;
 }
+.nav-item.active {
+    text-decoration: underline;
+    margin-bottom: auto;
+    color:#0d4446
+
+}
