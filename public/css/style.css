@@ -25,3 +25,51 @@ nav{
     color:#0d4446
 
 }
+body,html{
+    height: 100%;
+    overflow: hidden;
+}
+.home-logo{
+    width: 35%;
+    height: auto;
+    float: right;
+    margin-right: 10%;
+}
+.bg-img{
+    background-image: url(../assets/images/homebckgrnd.jpg);
+    height: 100%;
+    background-repeat: no-repeat; 
+    background-size: 100%;
+    background-position: middle;
+    /* filter: blur(5px); */
+}
+h1{
+    font-family:'Manjari';
+    font-style: thin;
+    line-height: auto;
+    letter-spacing: 0;
+    color: #Ffffff;
+    margin-left: 10%;
+    font-size: 55px;
+    margin-right: 55%;
+}
+h2{
+    font-family:'Manjari';
+    font-style: thin;
+    line-height: auto;
+    letter-spacing: 0;
+    color: #20c997;
+    margin-left: 10%;
+    font-size: 35px;
+}
+h4{
+    font-family:'Manjari';
+    font-style: thin;
+    line-height: auto;
+    letter-spacing: 0;
+    color: #Ffffff;
+    margin-left: 10%;
+    font-weight: 40;
+    font-size: 22px;
+    margin-right: 50%;
+}
