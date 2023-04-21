@@ -3,6 +3,8 @@
 body{
     background-color: #0d4446;
     font-family: 'Nunito', sans-serif;
+    overflow: auto;
+    overflow-x: hidden;
 }
 
 .btn-primary {
@@ -27,7 +29,8 @@ nav{
 }
 body,html{
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow: auto;
 }
 .home-logo{
     width: 35%;
@@ -36,12 +39,14 @@ body,html{
     margin-right: 10%;
 }
 .bg-img{
-    background-image: url(../assets/images/homebckgrnd.jpg);
+    background-image: url(../assets/images/homebckgrnd.jpeg);
     height: 100%;
     background-repeat: no-repeat; 
     background-size: 100%;
     background-position: middle;
-    /* filter: blur(5px); */
+    /* position: absolute; */
+    overflow-x: hidden;
+    /* overflow: auto; */
 }
 h1{
     font-family:'Manjari';
@@ -73,3 +78,4 @@ h4{
     font-size: 22px;
     margin-right: 50%;
 }
+

@@ -82,4 +82,6 @@
         </main>
     </div>
 </body>
+<script src="../js/jquery-3.6.4.min.js"></script>
+<script src="../js/registration.js"></script>
 </html>

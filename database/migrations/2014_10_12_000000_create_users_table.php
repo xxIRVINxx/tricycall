@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('address');
             $table->int('phone#');
             $table->string('plate#');
+            $table->string('description');
             $table->string('email')->unique();
             $table->string('role')->default(0);
             $table->timestamp('email_verified_at')->nullable();

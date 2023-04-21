@@ -19,10 +19,12 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/notification.css') }}">
+
 </head>
-<body>
+<body class="bg-img">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="position: fixed !important;  width: 100%;">
             <div class="container">
                 <a style="color: #00800D;" class="navbar-brand fw-bold" href="{{ url('/home') }}">
                 <img src="../assets/images/logo.png" style="width: 150px">
@@ -33,7 +35,6 @@
                             <li class="{{ request()->is('notification') ? 'active' : '' }} nav-item"><a class="nav-link" href="/notification">NOTIFICATION</a></li>
                             <li class="{{ request()->is('availability') ? 'active' : '' }} nav-item"><a class="nav-link" href="/availability">AVAILABILITY</a></li>
                             <li class="{{ request()->is('about') ? 'active' : '' }} nav-item"><a class="nav-link" href="/about">ABOUT</a></li>
-                            <li class="{{ request()->is('contact') ? 'active' : '' }} nav-item"><a class="nav-link" href="/contact">CONTACT US</a></li>
                         </ul>
                     </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -84,7 +85,7 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav><br><br>
 
         <main class="py-4">
             @yield('content')

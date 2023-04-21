@@ -21,4 +21,3 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'home']);
 Route::get('/notification', [App\Http\Controllers\NotificationController::class, 'index']);
 Route::get('/availability', [App\Http\Controllers\AvailabilityController::class, 'index']);
 Route::get('/about', [App\Http\Controllers\AboutController::class, 'index']);
-Route::get('/contact', [App\Http\Controllers\ContactUsController::class, 'index']);
