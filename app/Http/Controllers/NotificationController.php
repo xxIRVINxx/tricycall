@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Notification;
 use Illuminate\Http\Request;
+use App\Models\Availability;
+use Auth;
 
 class NotificationController extends Controller
 {
@@ -12,9 +14,13 @@ class NotificationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view ("notification");
+        if(Auth::user()->role == '0')
+            $data = Availability::where('customer_id', Auth::id())->with('driver')->get();
+        else
+            $data = Availability::where('driver_id', Auth::id())->with('customer')->get();
+        return view("notification", compact('data'));
     }
 
     /**

@@ -11,7 +11,17 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <!-- JavaScript -->
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <!-- Default theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+    <!-- Semantic UI theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css"/>
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -33,10 +43,19 @@
                         <ul class="navbar-nav">
                             <li class="{{ request()->is('home') ? 'active' : '' }} nav-item"><a class="nav-link" href="/home">HOME</a></li>
                             <li class="{{ request()->is('notification') ? 'active' : '' }} nav-item"><a class="nav-link" href="/notification">NOTIFICATION</a></li>
-                            <li class="{{ request()->is('availability') ? 'active' : '' }} nav-item"><a class="nav-link" href="/availability">AVAILABILITY</a></li>
+                            @if(Auth::user()->role == '0')
+                                <li class="{{ request()->is('availability') ? 'active' : '' }} nav-item"><a class="nav-link" href="/availability">AVAILABILITY</a></li>
+                            @endif
                             <li class="{{ request()->is('about') ? 'active' : '' }} nav-item"><a class="nav-link" href="/about">ABOUT</a></li>
                         </ul>
                     </div>
+                @if(Auth::user()->role == '2')
+                    @if(Auth::user()->is_available == 1)
+                        <button class="btn btn-success btn-sm" id="is-available" type="button" data-val="0">Available</button>
+                    @else
+                        <button class="btn btn-danger btn-sm" id="is-available" type="button" data-val="1">Unavailable</button>
+                    @endif
+                @endif
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -70,6 +89,9 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">
+                                        Profile
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -92,4 +114,15 @@
         </main>
     </div>
 </body>
+
+<script src="{{asset('js/jquery-3.6.4.min.js')}}"></script>
+<script src="{{asset('js/user.js')}}"></script>
+<script src="{{asset('js/availability.js')}}"></script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.rtl.min.css"/>
+<!-- Default theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.rtl.min.css"/>
+<!-- Semantic UI theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.rtl.min.css"/>
+<!-- Bootstrap theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.rtl.min.css"/>
 </html>

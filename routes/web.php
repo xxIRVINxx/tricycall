@@ -21,3 +21,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'home']);
 Route::get('/notification', [App\Http\Controllers\NotificationController::class, 'index']);
 Route::get('/availability', [App\Http\Controllers\AvailabilityController::class, 'index']);
 Route::get('/about', [App\Http\Controllers\AboutController::class, 'index']);
+
+
+Route::post('/set-availability', [App\Http\Controllers\HomeController::class, 'setAvailability']);
+Route::post('/book', [App\Http\Controllers\AvailabilityController::class, 'create']);
+Route::post('/booking-response', [App\Http\Controllers\AvailabilityController::class, 'responseBooking']);

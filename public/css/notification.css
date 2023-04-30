@@ -3,8 +3,6 @@
     border-radius: 10px;
     padding: 20px 40px;
     width: 800px;
-    /* margin-top: 3%; */
-    /* margin-bottom: 3%; */
 }
 .notification-label {
     margin-top: 0;
@@ -14,7 +12,7 @@
     margin-top: 20px;
     margin: 0 auto; /* centers the container */
     max-height: 450px; /* set the maximum height of the container */
-    overflow-y: auto; /* adds a vertical scrollbar when content overflows */
+    overflow-y: scroll; /* adds a vertical scrollbar when content overflows */
 }
 .notification-item {
     margin-bottom: 10px;
@@ -34,13 +32,76 @@
     display: flex;
     justify-content: center;
 }
-/* .bg-img{
-    background-image: url(../assets/images/homebckgrnd.jpeg);
+.notification-time {
+    float: right;
+    color: #999999;
+}
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    background-repeat: no-repeat; 
-    background-size: 100%;
-    background-position: middle;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup-content {
+    width: 700px;
+    height: 300px;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     position: absolute;
-    overflow-x: hidden;
-    overflow: auto;
-} */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+.customer-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.customer-info img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.customer-details h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+.accept-btn {
+    background-color: #008000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.decline-btn {
+    background-color: #FF0000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.name, .address, .phone {
+    font-weight: bold;
+    color:#008000
+}

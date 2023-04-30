@@ -1,0 +1,124 @@
+.availability-table {
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 5px #00800D;
+}
+.availability-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #CCCCCC;
+    padding: 10px;
+}
+.availability-column {
+    flex-basis: 25%;
+}
+.name-column {
+    border-right: 1px solid #CCCCCC;
+}
+.plate-column {
+    border-right: 1px solid #CCCCCC;
+}
+.color-column {
+    border-right: 1px solid #CCCCCC;
+}
+.availability-column {
+    text-align: center;
+}
+.column-label {
+    font-weight: bold;
+    text-decoration: underline;
+    border-bottom: 2px solid #CCCCCC;
+    color: #00800D;
+}
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup-content {
+  width: 700px;
+  height: 300px;
+  padding: 20px;
+  background-color: #FFF;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+.customer-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.customer-info img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.customer-details h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+.accept-btn {
+  background-color: #008000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.decline-btn {
+  background-color: #FF0000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.name, .address, .phone, .plate-number, .color{
+font-weight: bold;
+color:#008000
+}
+.check-availability{
+  text-decoration: underline;
+}
+.check-availability.available {
+  color: green;
+}
+.check-availability.unavailable {
+  color: red;
+}
+.unavailable {
+  text-decoration: none;
+}
