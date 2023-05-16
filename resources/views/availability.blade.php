@@ -5,48 +5,49 @@
 
 <link rel="stylesheet" href="{{ asset('css/availability.css') }}">
 
-<div class="availability-table">
-  <div class="availability-row">
-    <div class="availability-column name-column">
-      <p class="column-label">Name</p>
-      <!-- <p>John Doe</p> -->
-    </div>
-    <div class="availability-column plate-column">
-      <p class="column-label">Plate Number</p>
-      <!-- <p>ABC123</p> -->
-    </div>
-    <div class="availability-column color-column">
-      <p class="column-label">Color</p>
-      <!-- <p>Red</p> -->
-    </div>
-    <div class="availability-column availability-column">
-      <p class="column-label">Availability</p>
-      <!-- <p data-popup="myPopup" class= "check-availability">Available</p> -->
-    </div>
-  </div>
-    @foreach($data as $row)
+<div class="container1">
+  <div class="availability-table">
     <div class="availability-row">
       <div class="availability-column name-column">
-        <p>{{ucfirst($row->firstname)}} {{ucfirst($row->lastname)}}</p>
+        <p class="column-label">Name</p>
+        <!-- <p>John Doe</p> -->
       </div>
       <div class="availability-column plate-column">
-        <p>{{$row->plateno}}</p>
+        <p class="column-label">Plate Number</p>
+        <!-- <p>ABC123</p> -->
       </div>
       <div class="availability-column color-column">
-        <p data-popup="myPopup">{{$row->description}}</p>
+        <p class="column-label">Color</p>
+        <!-- <p>Red</p> -->
       </div>
       <div class="availability-column availability-column">
-        @if($row->is_booked)
-          <p data-popup="myPopup" class= "check-availability">Unavailable</p>
-        @else
-          <button class= "book btn btn-sm btn-primary" data-driver="{{$row}}" style="cursor: pointer !important;">Available</button>
-        @endif
+        <p class="column-label">Availability</p>
+        <!-- <p data-popup="myPopup" class= "check-availability">Available</p> -->
       </div>
     </div>
-    @endforeach
+      @foreach($data as $row)
+      <div class="availability-row">
+        <div class="availability-column name-column">
+          <p>{{ucfirst($row->firstname)}} {{ucfirst($row->lastname)}}</p>
+        </div>
+        <div class="availability-column plate-column">
+          <p>{{$row->plateno}}</p>
+        </div>
+        <div class="availability-column color-column">
+          <p data-popup="myPopup">{{$row->description}}</p>
+        </div>
+        <div class="availability-column availability-column">
+          @if($row->is_booked)
+            <p data-popup="myPopup" class= "check-availability">Unavailable</p>
+          @else
+            <button class= "book btn btn-sm btn-primary" data-driver="{{$row}}" style="cursor: pointer !important;">Available</button>
+          @endif
+        </div>
+      </div>
+      @endforeach
+    </div>
   </div>
 </div>
-
 
 <div class="popup" id="myPopup" style="display:none">
   <div class="popup-content">

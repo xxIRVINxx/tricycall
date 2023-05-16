@@ -79,3 +79,12 @@ h4{
     margin-right: 50%;
 }
 
+body{
+    font-family: 'Manjari';
+    font-style: thin;
+    line-height: auto;
+    letter-spacing: 0;
+    /* overflow: auto; */
+    overflow-x: hidden;
+
+}

@@ -6,6 +6,7 @@
 }
 .notification-label {
     margin-top: 0;
+    margin-left: 0;
     color: #00800D;
 }
 .notification-container {
@@ -104,4 +105,14 @@
 .name, .address, .phone {
     font-weight: bold;
     color:#008000
+}
+
+body{
+    font-family: 'Manjari';
+    font-style: thin;
+    line-height: auto;
+    letter-spacing: 0;
+    /* overflow: auto; */
+    overflow-x: hidden;
+
 }

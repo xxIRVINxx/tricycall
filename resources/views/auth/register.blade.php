@@ -124,10 +124,10 @@
                     <div id="driver">
                      <!-- PLATE NUMBER -->
                         <div class="row mb-3">
-                            <label for="plate#" class="col-md-4 col-form-label text-md-end">{{ __('Plate Number') }}</label>
+                            <label for="plate#" class="col-md-4 col-form-label text-md-end driver">{{ __('Plate Number') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="plate#" type="text" class="form-control @error('plate#') is-invalid @enderror" name="plate#" value="{{ old('plate#') }}" required autocomplete="plate#">
+                                    <input id="plate#" type="text" class="form-control @error('plate#') is-invalid @enderror driver" name="plate" autocomplete="plate#">
 
                                         @error('plate#')
                                             <span class="invalid-feedback" role="alert">
@@ -139,10 +139,10 @@
 
                     <!-- VEHICLE DESCRIPTION -->
                         <div class="row mb-3">
-                            <label for="description" class="col-md-4 col-form-label text-md-end">{{ __('Vehicle Description') }}</label>
+                            <label for="description" class="col-md-4 col-form-label text-md-end driver">{{ __('Vehicle Description') }}</label>
 
                                 <div class="col-md-6">
-                                    <textarea id="description" type="text" class="form-control @error('description') is-invalid @enderror" name="description" value="{{ old('description') }}" autocomplete="description"></textarea>
+                                    <textarea id="description" type="text" class="form-control @error('description') is-invalid @enderror driver" name="description" autocomplete="description">N/A</textarea>
 
                                         @error('description')
                                             <span class="invalid-feedback" role="alert">

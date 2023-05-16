@@ -122,3 +122,17 @@ color:#008000
 .unavailable {
   text-decoration: none;
 }
+
+body{
+  font-family: 'Manjari';
+  font-style: thin;
+  line-height: auto;
+  letter-spacing: 0;
+  /* overflow: auto; */
+  overflow-x: hidden;
+
+}
+.container1{
+  margin-left: 8%;
+  margin-right: 8%;
+}

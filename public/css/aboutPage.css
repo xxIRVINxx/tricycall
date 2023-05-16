@@ -69,7 +69,9 @@ h1,h2{
     margin-left: 2%;
     margin-right: auto;
 }
-
+.list{
+    margin-left: 5%;
+}
 .member .line {
     width: 50px;
     height: 2px;
@@ -121,6 +123,12 @@ h1,h2{
     color: #333;
     margin-top: 5%;
 }
+.content h1{
+    margin-left: 0%;
+}
+.content h2{
+    margin-left: 5%;
+}
 .founder-card-container {
     display: flex;
     justify-content: center;
@@ -136,6 +144,7 @@ h1,h2{
     justify-content: left;
     align-items: left;
     height: 100%;
+    margin-left: 5%;
 }
 .FT{
     margin: 10px;

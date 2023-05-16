@@ -25,7 +25,7 @@
         <nav class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container">
                 <a style="color: #00800D;" class="navbar-brand fw-bold" href="{{ url('/') }}">
-                    TricyCall
+                <img src= "./assets/images/logo.png" style= "width:56%; height: 56%;">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
